@@ -1,0 +1,44 @@
+Create role:
+1. Security, Identity & Compliance > IAM
+2. Role
+3. Create role
+4. Select lambda and click next
+5. Type SageMaker and mark the checkbox of SageMakerFullAccess and click next
+6. Fill the name: LambdaSageMakerRole
+7. Create role
+
+Create Lambda
+1. Compute > Lambda
+2. Create a new lambda function
+3. Fill the name: sentiment_lambda_function
+4. Runtime: Python3.6
+5. Role: Choose an existing role > LambdaSageMakerRole
+6. Create
+7. Scroll down and replace the code. Replace the endpoint name with the endpoint created. Replace the vocab with the vocab of the problem.
+8. Save
+
+Test Event
+1. Select Test Event
+2. New
+3. API Gateway AWS Proxy
+4. Name: testEvent
+5. Replace the body with a message
+6. Create
+7. Select the testEvent
+8. Click in Test and see the response
+
+Building an API
+1. Networking & Content Delivery > API Gateway
+2. Get Started > OK
+3. new API
+4. Name: sentimentAnalysis
+5. Create API
+6. Actions > Create method
+7. POST
+8. click in the check
+9. mark 'lambda function'
+10. mark use lambda proxy integration
+11. select the lambda function created before
+12. Save > ok
+13. Actions > Deploy API
+14. new stage > prod > save
