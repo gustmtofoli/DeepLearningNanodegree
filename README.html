@@ -7,6 +7,7 @@
 <meta charset="utf-8" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 
@@ -268,7 +269,6 @@ code {
 }
 img {
   max-width:100%;
-  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
@@ -342,18 +342,6 @@ summary {
 }
 </style>
 
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
-  });
-});
-</script>
-
 <!-- code folding -->
 
 
@@ -394,6 +382,14 @@ $(document).ready(function () {
 <li>impementation of a <a href="https://towardsdatascience.com/a-comprehensive-hands-on-guide-to-transfer-learning-with-real-world-applications-in-deep-learning-212bf3b2f27a">transfer learning</a> model to predict dog breeds from an image.</li>
 <li>Detect human faces and predict the dog breed that best fits the face in the image.</li>
 </ul></li>
+<li>Generate TV Scripts:
+<ul>
+<li>implementation of a <a href="https://www.bioinf.jku.at/publications/older/2604.pdf">Recurrent Neural Network with Long Short-Term Memory</a> to generate a TV Script.</li>
+</ul></li>
+<li>Generate Faces:
+<ul>
+<li>implementation of a <a href="http://papers.nips.cc/paper/5423-generative-adversarial-nets.pdf">Generative Adversarial Network</a> to generate faces based on celebrities faces.</li>
+</ul></li>
 </ul>
 </div>
 
@@ -414,6 +410,23 @@ $(document).ready(function () {
 
 
 </script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>
